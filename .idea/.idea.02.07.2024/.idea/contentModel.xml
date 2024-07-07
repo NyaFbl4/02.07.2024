@@ -950,6 +950,10 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Gem" t="Include">
+            <e p="GemObserver.cs" t="Include" />
+            <e p="GemStorage.cs" t="Include" />
+          </e>
           <e p="Helper.cs" t="Include" />
           <e p="LevelInstaller.cs" t="Include" />
           <e p="Money" t="Include">

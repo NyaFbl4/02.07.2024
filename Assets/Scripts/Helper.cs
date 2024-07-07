@@ -8,12 +8,12 @@ namespace MVP
     {
         [SerializeField] private long _current;
         private MoneyStorage _moneyStorage;
-        //private GemStorage _gemStorage;
+        private GemStorage _gemStorage;
         
         [Inject]
-        private void Construct(MoneyStorage moneyStorage)
+        private void Construct(MoneyStorage moneyStorage, GemStorage gemStorage)
         {
-            //_gemStorage = gemStorage;
+            _gemStorage = gemStorage;
             _moneyStorage = moneyStorage;
         }
 
@@ -21,15 +21,15 @@ namespace MVP
         public void AddMoney()
         {
             _moneyStorage.AddMoney(_current);
-            Debug.Log(_current.ToString());
+            //Debug.Log(_current.ToString());
         }
         [Button]
         public void SpendMoney()
         {
             _moneyStorage.SpendMoney(_current);
-            Debug.Log(_current.ToString());
+            //Debug.Log(_current.ToString());
         }
-        /*
+        
         [Button]
         public void AddGem()
         {
@@ -40,6 +40,6 @@ namespace MVP
         {
             _gemStorage.SpendGem(_current);
         }
-        */
+        
     }
 }

@@ -8,7 +8,7 @@ namespace MVP
         {
             var view = FindObjectOfType<CurrencyViewProvider>();
             MoneyBind(view.MoneyView);
-            //GemBind(view.GemView);
+            GemBind(view.GemView);
         }
 
         private void MoneyBind(CurrencyView view)
@@ -23,16 +23,15 @@ namespace MVP
                 .BindInterfacesAndSelfTo<MoneyObserver>()
                 .AsSingle()
                 .WithArguments(view)
-                .NonLazy(); 
+                .NonLazy();
         }
 
-        /*
         private void GemBind(CurrencyView view)
         {
             Container
                 .Bind<GemStorage>()
                 .AsSingle()
-                .WithArguments(1l)
+                .WithArguments(1L)
                 .NonLazy();
 
             Container
@@ -41,6 +40,6 @@ namespace MVP
                 .WithArguments(view)
                 .NonLazy(); 
         }
-        */
+        
     }
 }

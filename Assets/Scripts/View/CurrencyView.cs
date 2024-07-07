@@ -17,6 +17,7 @@ namespace MVP
         public void UpdateCurrency(long currency)
         {
             _lastCurrency = currency;
+            Setter(_lastCurrency);
         }
 
         private void Setter(long value)

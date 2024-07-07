@@ -10,12 +10,15 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/ManeyStorage.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/View/CurrencyView.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Money/MoneyObserver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelInstaller.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Hlper.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Helper.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/View/CurrencyViewProvider.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Helper.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/View/CurrencyView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Money/MoneyStorage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Money/MoneyObserver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Gem/GemStorage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Gem/GemObserver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelInstaller.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ivvMOrGUCMFF4Go369SnizwJl7" />
