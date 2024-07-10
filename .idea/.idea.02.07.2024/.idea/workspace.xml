@@ -19,6 +19,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/View/CurrencyViewProvider.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Helper.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Gem/GemStorage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroInfo.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ivvMOrGUCMFF4Go369SnizwJl7" />
@@ -27,9 +28,23 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae961c67-d6cc-4380-8a16-b5c3ef521234" name="Default Changelist" comment="" />
+      <created>1720614504103</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720614504103</updated>
+      <workItem from="1720614518592" duration="1306000" />
+    </task>
+    <servers />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
