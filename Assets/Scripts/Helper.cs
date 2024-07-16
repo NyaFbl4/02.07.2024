@@ -2,7 +2,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace MVP
+namespace PresentationModel
 {
     public class Helper : MonoBehaviour
     {

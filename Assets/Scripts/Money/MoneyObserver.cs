@@ -1,7 +1,7 @@
 ﻿using System;
 using Zenject;
 
-namespace MVP
+namespace PresentationModel
 {
     public class MoneyObserver : IInitializable, IDisposable
     {

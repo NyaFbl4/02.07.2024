@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace MVP
+namespace PresentationModel
 {
     public class CurrencyViewProvider : MonoBehaviour
     {

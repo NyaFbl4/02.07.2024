@@ -1,6 +1,6 @@
 ﻿using Zenject;
 
-namespace MVP
+namespace PresentationModel
 {
     public sealed class LevelInstaller : MonoInstaller
     {

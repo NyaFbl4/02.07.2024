@@ -11,15 +11,15 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/ManeyStorage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Hlper.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/View/CurrencyView.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Money/MoneyStorage.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Money/MoneyObserver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Gem/GemObserver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LevelInstaller.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/View/CurrencyViewProvider.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Helper.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Gem/GemStorage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Money/MoneyObserver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Helper.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Gem/GemObserver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Gem/GemStorage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LevelInstaller.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/View/CurrencyView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/View/CurrencyViewProvider.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Money/MoneyStorage.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ivvMOrGUCMFF4Go369SnizwJl7" />
@@ -42,6 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1720614504103</updated>
       <workItem from="1720614518592" duration="1306000" />
+      <workItem from="1720772186741" duration="6088000" />
     </task>
     <servers />
   </component>

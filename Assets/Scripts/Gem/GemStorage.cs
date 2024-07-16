@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MVP
+namespace PresentationModel
 {
     public class GemStorage
     {

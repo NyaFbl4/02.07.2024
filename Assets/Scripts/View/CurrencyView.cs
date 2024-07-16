@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
 
-namespace MVP
+namespace PresentationModel
 {
     public class CurrencyView : MonoBehaviour
     {
