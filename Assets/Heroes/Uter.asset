@@ -18,4 +18,4 @@ MonoBehaviour:
   _health: 100
   _attack: 15
   _moneyPrice: 50
-  _gemPrice: 20
+  _gemPrice: 25

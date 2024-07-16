@@ -20,6 +20,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/View/CurrencyView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/View/CurrencyViewProvider.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Money/MoneyStorage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Helpers/HeroHelper.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPopup.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Buttons/BuyButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/IHeroPresenter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPresenter.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ivvMOrGUCMFF4Go369SnizwJl7" />
@@ -43,6 +48,7 @@
       <updated>1720614504103</updated>
       <workItem from="1720614518592" duration="1306000" />
       <workItem from="1720772186741" duration="6088000" />
+      <workItem from="1721115006814" duration="9290000" />
     </task>
     <servers />
   </component>

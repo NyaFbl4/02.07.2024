@@ -17,5 +17,5 @@ MonoBehaviour:
   _lvl: 1
   _health: 80
   _attack: 20
-  _moneyPrice: 50
-  _gemPrice: 20
+  _moneyPrice: 70
+  _gemPrice: 35
