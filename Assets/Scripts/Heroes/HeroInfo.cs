@@ -12,9 +12,15 @@ namespace PresentationModel
         [SerializeField] private int _lvl;
         [SerializeField] private int _health;
         [SerializeField] private int _attack;
-
-        [Space]
+        
         [SerializeField] private int _moneyPrice;
         [SerializeField] private int _gemPrice;
+
+        public string Name => _name;
+        public Sprite Icon => _icon;
+        public int Lvl => _lvl;
+        public int Health => _health;
+        public int Attack => _attack;
+        public int MoneyPrice => _moneyPrice;
     }
 }

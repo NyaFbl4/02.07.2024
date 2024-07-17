@@ -1241,6 +1241,7 @@
             <e p="HeroHelper.cs" t="Include" />
           </e>
           <e p="Heroes" t="Include">
+            <e p="HeroBuyer.cs" t="Include" />
             <e p="HeroInfo.cs" t="Include" />
             <e p="HeroPopup.cs" t="Include" />
             <e p="HeroPresenter.cs" t="Include" />

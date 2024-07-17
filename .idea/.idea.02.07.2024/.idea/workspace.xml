@@ -11,7 +11,6 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/ManeyStorage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Hlper.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroInfo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Money/MoneyObserver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Helper.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Gem/GemObserver.cs" />
@@ -23,6 +22,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Helpers/HeroHelper.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPopup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Buttons/BuyButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroBuyer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/IHeroPresenter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPresenter.cs" />
     </changedPaths>
@@ -49,6 +50,7 @@
       <workItem from="1720614518592" duration="1306000" />
       <workItem from="1720772186741" duration="6088000" />
       <workItem from="1721115006814" duration="9290000" />
+      <workItem from="1721215785670" duration="4194000" />
     </task>
     <servers />
   </component>

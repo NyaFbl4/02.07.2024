@@ -5,9 +5,12 @@ namespace PresentationModel
 {
     public interface IHeroPresenter
     {
-        string Title { get; }
-        string Description { get; }
-        Sprite Icon { get; }
+        string Name   { get; }
+        string Lvl    { get; }
+        string Health { get; }
+        string Attack { get; }
+
+        Sprite Icon  { get; }
         string Price { get; }
         
         IReadOnlyReactiveProperty<bool> CanBuy { get; }
