@@ -9,14 +9,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buttons/BuyButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helpers/Helper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPresenter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Heroes/HeroInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPopup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helpers/HeroHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Heroes/IHeroPresenter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Money/MoneyStorage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Money/MoneyObserver.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPopup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPresenter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Heroes/IHeroPresenter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helpers/Helper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Heroes/HeroInfo.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -28,7 +28,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/LevelInstaller.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/View/CurrencyView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/View/CurrencyViewProvider.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Helpers/HeroHelper.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Buttons/BuyButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/IHeroPresenter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroBuyer.cs" />
@@ -36,7 +35,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Money/MoneyStorage.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroInfo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPresenter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPreseenterFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPresenterFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Helpers/HeroHelper.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Installers/HeroInstaller.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/IPresenter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPopup.cs" />
     </changedPaths>
   </component>

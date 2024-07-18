@@ -10,6 +10,11 @@ namespace PresentationModel
                 .Bind<HeroBuyer>()
                 .AsSingle()
                 .NonLazy();
+
+            Container
+                .Bind<HeroPresenterFactory>()
+                .AsSingle()
+                .NonLazy();
         }
     }
 }
