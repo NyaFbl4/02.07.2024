@@ -1247,7 +1247,10 @@
             <e p="HeroPresenter.cs" t="Include" />
             <e p="IHeroPresenter.cs" t="Include" />
           </e>
-          <e p="LevelInstaller.cs" t="Include" />
+          <e p="Installers" t="Include">
+            <e p="HeroInstaller.cs" t="Include" />
+            <e p="LevelInstaller.cs" t="Include" />
+          </e>
           <e p="Money" t="Include">
             <e p="MoneyObserver.cs" t="Include" />
             <e p="MoneyStorage.cs" t="Include" />

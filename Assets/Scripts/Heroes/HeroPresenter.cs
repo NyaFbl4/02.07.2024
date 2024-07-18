@@ -23,11 +23,46 @@ namespace PresentationModel
 
         public IReadOnlyReactiveProperty<long> Money;
 
+        public HeroPresenter(HeroInfo heroInfo, HeroBuyer heroBuyer, MoneyStorage moneyStorage)
+        {
+            _heroInfo  = heroInfo;
+            _heroBuyer = heroBuyer;
+            Name       = _heroInfo.Name;
+            Lvl        = _heroInfo.Lvl.ToString();
+            Health     = _heroInfo.Health.ToString();
+            Attack     = _heroInfo.Attack.ToString();
+
+            moneyStorage.Money.Subscribe(UpdateCanBuy).AddTo(_compositeDisposable);
+            BuyCommand = new ReactiveCommand(CanBuy);
+            BuyCommand.Subscribe(OnBuyCommand).AddTo(_compositeDisposable);
+            BuyCommand.Pairwise().Subscribe(OnNext).AddTo(_compositeDisposable);
+            Money = moneyStorage.Money;
+        }
+
+        ~HeroPresenter()
+        {
+            _compositeDisposable.Dispose();
+        }
+
+        private void UpdateCanBuy(long _)
+        {
+            _canBuy.Value = _heroBuyer.CanBuy(_heroInfo);
+        }
+
+        private void OnBuyCommand(Unit _)
+        {
+            Buy();
+        }
+        
+        private void OnNext(Pair<Unit> obj)
+        {
+        }
+        
         public void Buy()
         {
             if (CanBuy.Value)
             {
-                
+                _heroBuyer.Buy(_heroInfo);
             }
         }
     }

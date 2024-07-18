@@ -1,4 +1,5 @@
 ﻿using TMPro;
+using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,5 +15,8 @@ namespace PresentationModel
 
         [SerializeField] private BuyButton _buyButton;
         [SerializeField] private Button _buttonClose;
+
+        private IHeroPresenter _heroPresenter;
+        private readonly CompositeDisposable _disposable = new();
     }
 }

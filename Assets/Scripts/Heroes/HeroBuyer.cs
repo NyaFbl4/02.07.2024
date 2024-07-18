@@ -23,5 +23,10 @@ namespace PresentationModel
                 Debug.LogWarning($"<color=red>Not enough money for product {heroInfo.Name}!</color>");
             }
         }
+
+        public bool CanBuy(HeroInfo heroInfo)
+        {
+            return _moneyStorage.Money.Value >= heroInfo.MoneyPrice;
+        }
     }
 }
