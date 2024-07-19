@@ -2,7 +2,7 @@
 
 namespace PresentationModel
 {
-    public class CurrencyViewProvider : MonoBehaviour
+    public sealed class CurrencyViewProvider : MonoBehaviour
     {
         [SerializeField] private CurrencyView _gemView;
         [SerializeField] private CurrencyView _moneyView;

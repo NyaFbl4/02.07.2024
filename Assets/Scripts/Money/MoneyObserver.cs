@@ -4,7 +4,7 @@ using Zenject;
 
 namespace PresentationModel
 {
-    public class MoneyObserver : IDisposable
+    public sealed class MoneyObserver : IDisposable
     {
         private readonly CurrencyView _view;
         private readonly MoneyStorage _storage;
@@ -20,7 +20,6 @@ namespace PresentationModel
         public void Dispose()
         {
             _disposable.Dispose();
-            //_storage.OnMoneyChanged -= OnMoneyChanged;
         }
 
         private void OnMoneyChanged(long money)

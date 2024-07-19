@@ -1,6 +1,6 @@
 ﻿namespace PresentationModel
 {
-    public class HeroPresenterFactory
+    public sealed class HeroPresenterFactory
     {
         private readonly HeroBuyer _heroBuyer;
         private readonly MoneyStorage _moneyStorage;

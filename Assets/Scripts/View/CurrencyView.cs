@@ -3,7 +3,7 @@ using TMPro;
 
 namespace PresentationModel
 {
-    public class CurrencyView : MonoBehaviour
+    public sealed class CurrencyView : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI _currencyText;
         private long _lastCurrency;

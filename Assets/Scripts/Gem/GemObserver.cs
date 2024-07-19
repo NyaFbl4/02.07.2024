@@ -3,7 +3,7 @@ using Zenject;
 
 namespace PresentationModel
 {
-    public class GemObserver : IInitializable, IDisposable
+    public sealed class GemObserver : IInitializable, IDisposable
     {
         private readonly CurrencyView _view;
         private readonly GemStorage _storage;

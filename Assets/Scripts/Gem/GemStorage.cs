@@ -2,7 +2,7 @@
 
 namespace PresentationModel
 {
-    public class GemStorage
+    public sealed class GemStorage
     {
         public event Action<long> OnGemChanged;
 

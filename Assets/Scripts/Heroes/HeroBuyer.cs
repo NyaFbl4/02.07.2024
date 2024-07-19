@@ -2,7 +2,7 @@
 
 namespace PresentationModel
 {
-    public class HeroBuyer
+    public sealed class HeroBuyer
     {
         private readonly MoneyStorage _moneyStorage;
 

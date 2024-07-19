@@ -4,7 +4,7 @@ using Zenject;
 
 namespace PresentationModel
 {
-    public class Helper : MonoBehaviour
+    public sealed class Helper : MonoBehaviour
     {
         [SerializeField] private long _current;
         private MoneyStorage _moneyStorage;
@@ -21,13 +21,11 @@ namespace PresentationModel
         public void AddMoney()
         {
             _moneyStorage.AddMoney(_current);
-            //Debug.Log(_current.ToString());
         }
         [Button]
         public void SpendMoney()
         {
             _moneyStorage.SpendMoney(_current);
-            //Debug.Log(_current.ToString());
         }
         
         [Button]

@@ -12,7 +12,6 @@ namespace PresentationModel
         [SerializeField] private int _lvl;
         [SerializeField] private int _health;
         [SerializeField] private int _attack;
-        
         [SerializeField] private int _moneyPrice;
 
         public string Name => _name;

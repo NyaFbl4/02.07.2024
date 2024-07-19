@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace PresentationModel
 {
-    public class HeroPresenter : IHeroPresenter
+    public sealed class HeroPresenter : IHeroPresenter
     {
         public string Name   { get; }
         public string Lvl    { get; }
@@ -37,7 +37,6 @@ namespace PresentationModel
             moneyStorage.Money.Subscribe(UpdateCanBuy).AddTo(_compositeDisposable);
             BuyCommand = new ReactiveCommand(CanBuy);
             BuyCommand.Subscribe(OnBuyCommand).AddTo(_compositeDisposable);
-            BuyCommand.Pairwise().Subscribe(OnNext).AddTo(_compositeDisposable);
             Money = moneyStorage.Money;
         }
 
@@ -55,11 +54,7 @@ namespace PresentationModel
         {
             Buy();
         }
-        
-        private void OnNext(Pair<Unit> obj)
-        {
-        }
-        
+
         public void Buy()
         {
             if (CanBuy.Value)

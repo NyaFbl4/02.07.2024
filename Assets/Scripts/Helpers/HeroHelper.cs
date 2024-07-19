@@ -6,7 +6,7 @@ using Zenject;
 
 namespace PresentationModel
 {
-    public class HeroHelper : MonoBehaviour
+    public sealed class HeroHelper : MonoBehaviour
     {
         [SerializeField] private HeroInfo _heroInfo;
         [SerializeField] private HeroPopup _heroPopup;
