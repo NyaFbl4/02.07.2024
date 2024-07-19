@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace PresentationModel
 {
-    public class BuyButton : MonoBehaviour
+    public sealed class BuyButton : MonoBehaviour
     {
         [SerializeField] private Button _button;
         [SerializeField] private Image _buttonBackground;
@@ -42,10 +42,12 @@ namespace PresentationModel
                     Button.interactable = true;
                     _buttonBackground.sprite = _availableButtonSprite;
                     break;
+                
                 case BuyButtonState.Locked:
                     Button.interactable = false;
                     _buttonBackground.sprite = _lockedButtonSprite;
                     break;
+                
                 default:
                     throw new Exception($"Undefined button state {state}!");
             }

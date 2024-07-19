@@ -29,17 +29,17 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/View/CurrencyView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/View/CurrencyViewProvider.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Buttons/BuyButton.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/IHeroPresenter.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroBuyer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Money/MoneyObserver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Money/MoneyStorage.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroInfo.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPresenter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPreseenterFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPresenterFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Helpers/HeroHelper.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Installers/HeroInstaller.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/IPresenter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroBuyer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPresenter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/IHeroPresenter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroInfo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPopup.cs" />
     </changedPaths>
   </component>

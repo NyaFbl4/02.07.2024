@@ -11,8 +11,8 @@ namespace PresentationModel
         string Attack { get; }
 
         Sprite Icon  { get; }
-        string Price { get; }
-        
+        string PriceGold { get; }
+
         IReadOnlyReactiveProperty<bool> CanBuy { get; }
         ReactiveCommand BuyCommand { get; }
         

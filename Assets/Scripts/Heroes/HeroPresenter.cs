@@ -10,8 +10,8 @@ namespace PresentationModel
         public string Health { get; }
         public string Attack { get; }
         public Sprite Icon   { get; }
-        public string Price  { get; }
-        
+        public string PriceGold  { get; }
+
         public ReactiveCommand BuyCommand { get; }
         
         public  IReadOnlyReactiveProperty<bool> CanBuy => _canBuy;
@@ -31,6 +31,8 @@ namespace PresentationModel
             Lvl        = _heroInfo.Lvl.ToString();
             Health     = _heroInfo.Health.ToString();
             Attack     = _heroInfo.Attack.ToString();
+            Icon       = _heroInfo.Icon;
+            PriceGold  = _heroInfo.MoneyPrice.ToString();
 
             moneyStorage.Money.Subscribe(UpdateCanBuy).AddTo(_compositeDisposable);
             BuyCommand = new ReactiveCommand(CanBuy);

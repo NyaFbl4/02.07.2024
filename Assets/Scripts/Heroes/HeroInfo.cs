@@ -14,7 +14,6 @@ namespace PresentationModel
         [SerializeField] private int _attack;
         
         [SerializeField] private int _moneyPrice;
-        [SerializeField] private int _gemPrice;
 
         public string Name => _name;
         public Sprite Icon => _icon;

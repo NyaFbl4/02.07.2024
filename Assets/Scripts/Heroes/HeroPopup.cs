@@ -22,20 +22,17 @@ namespace PresentationModel
 
         public void Show(IHeroPresenter args)
         {
-            if (args is not IHeroPresenter heroPresenter)
-            {
-                throw new ArgumentException("Expected HeroInfo");
-            }
+            IHeroPresenter heroPresenter = args as IHeroPresenter;
             gameObject.SetActive(true);
 
             _heroPresenter = heroPresenter;
-            _name.text = heroPresenter.Name;
-            _lvl.text = heroPresenter.Lvl;
-            _health.text = heroPresenter.Health;
-            _attack.text = heroPresenter.Attack;
-            _icon.sprite = heroPresenter.Icon;
+            _name.text     = heroPresenter.Name;
+            _lvl.text      = heroPresenter.Lvl;
+            _health.text   = heroPresenter.Health;
+            _attack.text   = heroPresenter.Attack;
+            _icon.sprite   = heroPresenter.Icon;
             
-            _buyButton.SetPrice(_heroPresenter.Price);
+            _buyButton.SetPrice(_heroPresenter.PriceGold);
 
             _heroPresenter.BuyCommand.BindTo(_buyButton.Button).AddTo(_disposable);
             _heroPresenter.CanBuy.Subscribe(OnCanBuy).AddTo(_disposable);
