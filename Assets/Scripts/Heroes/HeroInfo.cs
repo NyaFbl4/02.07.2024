@@ -12,7 +12,11 @@ namespace PresentationModel
         [SerializeField] private int _lvl;
         [SerializeField] private int _health;
         [SerializeField] private int _attack;
+        [SerializeField] private string _description;
+        [SerializeField] private int _currentExperience;
+        
         [SerializeField] private int _moneyPrice;
+        
 
         public string Name => _name;
         public Sprite Icon => _icon;
