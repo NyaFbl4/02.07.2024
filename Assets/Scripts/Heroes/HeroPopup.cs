@@ -20,16 +20,17 @@ namespace PresentationModel
         private IHeroPresenter _heroPresenter;
         private readonly CompositeDisposable _disposable = new();
 
-        public void Show(IHeroPresenter args)
+        public void Show(IHeroPresenter iHeroPresenter, IHeroStatsPresenter iHeroStatsPresenter)
         {
-            IHeroPresenter heroPresenter = args as IHeroPresenter;
+            IHeroPresenter heroPresenter = iHeroPresenter as IHeroPresenter;
+            IHeroStatsPresenter heroStatsPresenter = iHeroStatsPresenter as IHeroStatsPresenter;
             gameObject.SetActive(true);
 
             _heroPresenter = heroPresenter;
             _name.text     = heroPresenter.Name;
-            _lvl.text      = heroPresenter.Lvl;
-            _health.text   = heroPresenter.Health;
-            _attack.text   = heroPresenter.Attack;
+            _lvl.text      = heroStatsPresenter.Lvl;
+            _health.text   = heroStatsPresenter.Health;
+            _attack.text   = heroStatsPresenter.Attack;
             _icon.sprite   = heroPresenter.Icon;
             
             _buyButton.SetPrice(_heroPresenter.PriceGold);

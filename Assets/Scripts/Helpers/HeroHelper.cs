@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using PresentationModel.Presenters;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using Zenject;
@@ -12,6 +13,7 @@ namespace PresentationModel
         [SerializeField] private HeroPopup _heroPopup;
 
         private HeroPresenterFactory _heroPresenterFactory;
+        private HeroStatsPresenterFactory _heroStatsPresenterFactory;
 
         [Inject]
         private void Construct(HeroPresenterFactory heroPresenterFactory)
@@ -23,7 +25,8 @@ namespace PresentationModel
         public void HeroPopupShow()
         {
             IHeroPresenter heroPresenter = _heroPresenterFactory.Create(_heroInfo);
-            _heroPopup.Show(heroPresenter);
+            IHeroStatsPresenter heroStatsPresenter = _heroStatsPresenterFactory.Create(_heroInfo);        
+            _heroPopup.Show(heroPresenter, heroStatsPresenter);
         }
         
     }
