@@ -1,62 +1,51 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace PresentationModel
 {
-    public sealed class HeroPopup : MonoBehaviour
+    public sealed class HeroStatsView : MonoBehaviour
     {
-        [SerializeField] private TMP_Text _name;
         [SerializeField] private TMP_Text _lvl;
         [SerializeField] private TMP_Text _health;
         [SerializeField] private TMP_Text _attack;
-        [SerializeField] private Image _icon;
-
+        
         [SerializeField] private BuyButton _buyButton;
         [SerializeField] private Button _buttonClose;
 
-        private IHeroPresenter _heroPresenter;
         private IHeroStatsPresenter _heroStatsPresenter;
         private readonly CompositeDisposable _disposable = new();
 
-        public void Show(IHeroPresenter iHeroPresenter)
+        public void ShowPopupStats(IHeroStatsPresenter iHeroStatsPresenter)
         {
-            IHeroPresenter heroPresenter = iHeroPresenter as IHeroPresenter;
-            //IHeroStatsPresenter heroStatsPresenter = iHeroStatsPresenter as IHeroStatsPresenter;
+            IHeroStatsPresenter heroStatsPresenter = iHeroStatsPresenter as IHeroStatsPresenter;
             gameObject.SetActive(true);
 
-            _heroPresenter = heroPresenter;
-            //_heroStatsPresenter = heroStatsPresenter;
-                
-            _name.text     = heroPresenter.Name;
-            //_lvl.text      = heroStatsPresenter.Lvl;
-            //_health.text   = heroStatsPresenter.Health;
-            //_attack.text   = heroStatsPresenter.Attack;
-            _icon.sprite   = heroPresenter.Icon;
-            
-            _buyButton.SetPrice(_heroPresenter.PriceGold);
+            _heroStatsPresenter = heroStatsPresenter;
 
-            _heroPresenter.BuyCommand.BindTo(_buyButton.Button).AddTo(_disposable);
-            _heroPresenter.CanBuy.Subscribe(OnCanBuy).AddTo(_disposable);
+            _lvl.text      = heroStatsPresenter.Lvl;
+            _health.text   = heroStatsPresenter.Health;
+            _attack.text   = heroStatsPresenter.Attack;
+            
+            _buyButton.SetPrice(_heroStatsPresenter.PriceGold);
+            
+            _heroStatsPresenter.LvlUp.BindTo(_buyButton.Button).AddTo(_disposable);
+            _heroStatsPresenter.CanBuy.Subscribe(OnCanBuy).AddTo(_disposable);
             _buttonClose.onClick.AddListener(Hide);
             UpdateButtonState();
         }
-
         private void OnCanBuy(bool _)
         {
             UpdateButtonState();
         }
-
+        
         private void UpdateButtonState()
         {
-            /*
-             var buttonState = _heroStatsPresenter.CanBuy.Value
+            var buttonState = _heroStatsPresenter.CanBuy.Value
                 ? BuyButtonState.Available
                 : BuyButtonState.Locked;
             _buyButton.SetState(buttonState);
-            */
         }
 
         private void Hide()
@@ -69,12 +58,10 @@ namespace PresentationModel
         
         private void OnBuyButtoClicked()
         {
-            /*
             if (_heroStatsPresenter.CanBuy.Value)
             {
                 _heroStatsPresenter.Buy();;
             }
-            */
         }
     }
 }

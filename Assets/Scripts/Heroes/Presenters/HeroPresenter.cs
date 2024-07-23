@@ -10,7 +10,6 @@ namespace PresentationModel
         public Sprite Icon   { get; }
         public string CurrentExperience { get; }
         public string PriceGold  { get; }
-
         public ReactiveCommand BuyCommand { get; }
         
         public  IReadOnlyReactiveProperty<bool> CanBuy => _canBuy;
@@ -26,6 +25,7 @@ namespace PresentationModel
         {
             _heroInfo   = heroInfo;
             _heroBuyer = heroBuyer;
+            
             Name        = _heroInfo.Name;
             //Lvl        = _heroInfo.Lvl.ToString();
             //Health     = _heroInfo.Health.ToString();
@@ -34,11 +34,11 @@ namespace PresentationModel
             Description = _heroInfo.Description;
             CurrentExperience = _heroInfo.CurrentExperience.ToString();
             PriceGold   = _heroInfo.MoneyPrice.ToString();
-            
-            
+
             moneyStorage.Money.Subscribe(UpdateCanBuy).AddTo(_compositeDisposable);
             BuyCommand = new ReactiveCommand(CanBuy);
             BuyCommand.Subscribe(OnBuyCommand).AddTo(_compositeDisposable);
+            
             Money = moneyStorage.Money;
         }
 
@@ -47,7 +47,6 @@ namespace PresentationModel
             _compositeDisposable.Dispose();
         }
 
-        
         private void UpdateCanBuy(long _)
         {
             _canBuy.Value = _heroBuyer.CanBuy(_heroInfo);

@@ -16,15 +16,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buttons/BuyButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helpers/Helper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Heroes/HeroInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helpers/HeroHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Money/MoneyStorage.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Otus/Lesson_9/Assets/Code/Product/ProductPresenter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Heroes/Popups/HeroPopup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Money/MoneyObserver.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helpers/Helper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Heroes/Presenters/HeroPresenter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Heroes/HeroInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../Otus/Lesson_9/Assets/Code/Product/ProductPopup.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -51,18 +47,23 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPresenter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/LvlUpHero.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPresenterFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Presenters/HeroStatsPresenterFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroPopup.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroInfo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Presenters/HeroPresenterFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Popups/PopupHero.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Presenters/HeroPresenter.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Popups/HeroPopup.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Presenters/HeroStatsPresenter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Installers/HeroInstaller.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Presenters/HeroStatsPresenterFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Interfaces/IHeroPresenter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Interfaces/IHeroStatsPresenter.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Installers/HeroInstaller.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Presenters/HeroPresenter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Interfaces/ITestResenter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Presenters/HeroStatsPresenter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Presenters/TestPresenter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Presenters/TestPresenterFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Popups/TestPopup.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Popups/HeroPopup.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Popups/PopupHero.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Helpers/HeroHelper.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Hero.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroInfo.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ivvMOrGUCMFF4Go369SnizwJl7" />
