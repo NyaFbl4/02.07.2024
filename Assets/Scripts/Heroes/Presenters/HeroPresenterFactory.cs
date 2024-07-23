@@ -13,7 +13,7 @@
 
         public IHeroPresenter Create(HeroInfo heroInfo)
         {
-            return new HeroPresenter(heroInfo); //, _heroBuyer, _moneyStorage);
+            return new HeroPresenter(heroInfo, _heroBuyer, _moneyStorage);
         }
     }
 }

@@ -16,10 +16,11 @@ namespace PresentationModel
         public string CurrentExperience { get; }
         Sprite Icon  { get; }
         string PriceGold { get; }
-
-        //IReadOnlyReactiveProperty<bool> CanBuy { get; }
-        //ReactiveCommand BuyCommand { get; }
         
-        //void Buy();
+
+        IReadOnlyReactiveProperty<bool> CanBuy { get; }
+        ReactiveCommand BuyCommand { get; }
+        
+        void Buy();
     }
 }

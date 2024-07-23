@@ -22,10 +22,10 @@ namespace PresentationModel
 
         public IReadOnlyReactiveProperty<long> Money;
 
-        public HeroPresenter(HeroInfo heroInfo)//, HeroBuyer heroBuyer, MoneyStorage moneyStorage)
+        public HeroPresenter(HeroInfo heroInfo, HeroBuyer heroBuyer, MoneyStorage moneyStorage)
         {
             _heroInfo   = heroInfo;
-            //_heroBuyer = heroBuyer;
+            _heroBuyer = heroBuyer;
             Name        = _heroInfo.Name;
             //Lvl        = _heroInfo.Lvl.ToString();
             //Health     = _heroInfo.Health.ToString();
@@ -35,12 +35,11 @@ namespace PresentationModel
             CurrentExperience = _heroInfo.CurrentExperience.ToString();
             PriceGold   = _heroInfo.MoneyPrice.ToString();
             
-            /*
+            
             moneyStorage.Money.Subscribe(UpdateCanBuy).AddTo(_compositeDisposable);
             BuyCommand = new ReactiveCommand(CanBuy);
             BuyCommand.Subscribe(OnBuyCommand).AddTo(_compositeDisposable);
             Money = moneyStorage.Money;
-            */
         }
 
         ~HeroPresenter()
@@ -48,7 +47,7 @@ namespace PresentationModel
             _compositeDisposable.Dispose();
         }
 
-        /*
+        
         private void UpdateCanBuy(long _)
         {
             _canBuy.Value = _heroBuyer.CanBuy(_heroInfo);
@@ -66,6 +65,6 @@ namespace PresentationModel
                 _heroBuyer.Buy(_heroInfo);
             }
         }
-        */
+        
     }
 }

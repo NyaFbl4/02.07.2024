@@ -4,17 +4,19 @@ namespace PresentationModel
 {
     public sealed class HeroStatsPresenter : IHeroStatsPresenter
     {
+        public string Lvl    { get; }
+        public string Health { get; }
+        public string Attack { get; }
+        public string PriceGold  { get; }
+        public ReactiveCommand LvlUp { get; }
+        
+        public IReadOnlyReactiveProperty<bool> CanBuy => _canBuy;
+        private readonly ReactiveProperty<bool> _canBuy = new BoolReactiveProperty();
+        
         private readonly HeroInfo _heroInfo;
         private readonly HeroExperienceBuyer _heroExperienceBuyer;
         private readonly CompositeDisposable _compositeDisposable = new();
         
-        public string Lvl    { get; }
-        public string Health { get; }
-        public string Attack { get; }
-        
-        public ReactiveCommand LvlUp { get; }
-        private readonly ReactiveProperty<bool> _canBuy = new BoolReactiveProperty();
-        public  IReadOnlyReactiveProperty<bool> CanBuy => _canBuy;
         public IReadOnlyReactiveProperty<long> Money;
         
         public HeroStatsPresenter(HeroInfo heroInfo, MoneyStorage moneyStorage, 
@@ -26,6 +28,7 @@ namespace PresentationModel
             Lvl        = _heroInfo.Lvl.ToString();
             Health     = _heroInfo.Health.ToString();
             Attack     = _heroInfo.Attack.ToString();
+            PriceGold  = _heroInfo.MoneyPrice.ToString();
             
             moneyStorage.Money.Subscribe(UpdateCanBuy).AddTo(_compositeDisposable);
             LvlUp = new ReactiveCommand(CanBuy);

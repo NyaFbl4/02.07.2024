@@ -10,7 +10,8 @@ namespace PresentationModel
     public sealed class HeroHelper : MonoBehaviour
     {
         [SerializeField] private HeroInfo _heroInfo;
-        [SerializeField] private HeroPopup _heroPopup;
+        //[SerializeField] private HeroPopup _heroPopup;
+        [SerializeField] private PopupHero _popupHero;
 
         private HeroPresenterFactory _heroPresenterFactory;
         private HeroStatsPresenterFactory _heroStatsPresenterFactory;
@@ -24,9 +25,10 @@ namespace PresentationModel
         [Button]
         public void HeroPopupShow()
         {
-            IHeroPresenter heroPresenter = _heroPresenterFactory.Create(_heroInfo);
+            //IHeroPresenter heroPresenter = _heroPresenterFactory.Create(_heroInfo);
             IHeroStatsPresenter heroStatsPresenter = _heroStatsPresenterFactory.Create(_heroInfo);        
-            _heroPopup.Show(heroPresenter, heroStatsPresenter);
+            //_heroPopup.Show(heroPresenter, heroStatsPresenter);
+            _popupHero.ShowPopupStats(heroStatsPresenter);
         }
         
     }

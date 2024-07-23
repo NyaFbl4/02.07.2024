@@ -18,19 +18,22 @@ namespace PresentationModel
         [SerializeField] private Button _buttonClose;
 
         private IHeroPresenter _heroPresenter;
+        private IHeroStatsPresenter _heroStatsPresenter;
         private readonly CompositeDisposable _disposable = new();
 
-        public void Show(IHeroPresenter iHeroPresenter, IHeroStatsPresenter iHeroStatsPresenter)
+        public void Show(IHeroPresenter iHeroPresenter)
         {
             IHeroPresenter heroPresenter = iHeroPresenter as IHeroPresenter;
-            IHeroStatsPresenter heroStatsPresenter = iHeroStatsPresenter as IHeroStatsPresenter;
+            //IHeroStatsPresenter heroStatsPresenter = iHeroStatsPresenter as IHeroStatsPresenter;
             gameObject.SetActive(true);
 
             _heroPresenter = heroPresenter;
+            //_heroStatsPresenter = heroStatsPresenter;
+                
             _name.text     = heroPresenter.Name;
-            _lvl.text      = heroStatsPresenter.Lvl;
-            _health.text   = heroStatsPresenter.Health;
-            _attack.text   = heroStatsPresenter.Attack;
+            //_lvl.text      = heroStatsPresenter.Lvl;
+            //_health.text   = heroStatsPresenter.Health;
+            //_attack.text   = heroStatsPresenter.Attack;
             _icon.sprite   = heroPresenter.Icon;
             
             _buyButton.SetPrice(_heroPresenter.PriceGold);
@@ -48,10 +51,12 @@ namespace PresentationModel
 
         private void UpdateButtonState()
         {
-            var buttonState = _heroPresenter.CanBuy.Value
+            /*
+             var buttonState = _heroStatsPresenter.CanBuy.Value
                 ? BuyButtonState.Available
                 : BuyButtonState.Locked;
             _buyButton.SetState(buttonState);
+            */
         }
 
         private void Hide()
@@ -64,10 +69,12 @@ namespace PresentationModel
         
         private void OnBuyButtoClicked()
         {
-            if (_heroPresenter.CanBuy.Value)
+            /*
+            if (_heroStatsPresenter.CanBuy.Value)
             {
-                _heroPresenter.Buy();;
+                _heroStatsPresenter.Buy();;
             }
+            */
         }
     }
 }

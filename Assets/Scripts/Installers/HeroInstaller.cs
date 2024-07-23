@@ -1,4 +1,5 @@
-﻿using Zenject;
+﻿using PresentationModel.Presenters;
+using Zenject;
 
 namespace PresentationModel
 {
@@ -13,6 +14,16 @@ namespace PresentationModel
 
             Container
                 .Bind<HeroPresenterFactory>()
+                .AsSingle()
+                .NonLazy();
+
+            Container
+                .Bind<HeroExperienceBuyer>()
+                .AsSingle()
+                .NonLazy();
+
+            Container
+                .Bind<HeroStatsPresenterFactory>()
                 .AsSingle()
                 .NonLazy();
         }
