@@ -7,9 +7,8 @@ namespace PresentationModel
     {
         string Name   { get; }
         public string Description { get; }
-        public string CurrentExperience { get; }
         Sprite Icon  { get; }
-        string PriceGold { get; }
+
         
 
         IReadOnlyReactiveProperty<bool> CanBuy { get; }

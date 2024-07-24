@@ -10,6 +10,7 @@ namespace PresentationModel
         [SerializeField] private TMP_Text _lvl;
         [SerializeField] private TMP_Text _health;
         [SerializeField] private TMP_Text _attack;
+        [SerializeField] private TMP_Text _currentExperience;
         
         [SerializeField] private BuyButton _buyButton;
         [SerializeField] private Button _buttonClose;
@@ -24,9 +25,10 @@ namespace PresentationModel
 
             _heroStatsPresenter = heroStatsPresenter;
 
-            _lvl.text      = heroStatsPresenter.Lvl;
-            _health.text   = heroStatsPresenter.Health;
-            _attack.text   = heroStatsPresenter.Attack;
+            _lvl.text               = heroStatsPresenter.Lvl;
+            _health.text            = heroStatsPresenter.Health;
+            _attack.text            = heroStatsPresenter.Attack;
+            _currentExperience.text = heroStatsPresenter.CurrentExperience;
             
             _buyButton.SetPrice(_heroStatsPresenter.PriceGold);
             
@@ -60,7 +62,7 @@ namespace PresentationModel
         {
             if (_heroStatsPresenter.CanBuy.Value)
             {
-                _heroStatsPresenter.Buy();;
+                _heroStatsPresenter.Buy();
             }
         }
     }

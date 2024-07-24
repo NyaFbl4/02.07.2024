@@ -1235,6 +1235,9 @@
           <e p="Configs" t="Include">
             <e p="LevelUpConfig.cs" t="Include" />
           </e>
+          <e p="Experience" t="Include">
+            <e p="ExperienceManager.cs" t="Include" />
+          </e>
           <e p="Gem" t="Include">
             <e p="GemObserver.cs" t="Include" />
             <e p="GemStorage.cs" t="Include" />

@@ -9,6 +9,7 @@ namespace PresentationModel
         string Health { get; }
         string Attack { get; }
         string PriceGold  { get; }
+        public string CurrentExperience { get; }
 
         ReactiveCommand LvlUp { get; }
         IReadOnlyReactiveProperty<bool> CanBuy { get; }

@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 100902546}
   - component: {fileID: 100902545}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TitleExperience
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3471,6 +3471,7 @@ MonoBehaviour:
   _lvl: {fileID: 651760942}
   _health: {fileID: 1260974552}
   _attack: {fileID: 8972286}
+  _currentExperience: {fileID: 100902545}
   _buyButton: {fileID: 1068598589}
   _buttonClose: {fileID: 926146228}
 --- !u!1 &1559735885

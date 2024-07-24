@@ -1,6 +1,9 @@
-﻿using Sirenix.OdinInspector;
+﻿using Assets.Scripts.Experience;
+using Sirenix.OdinInspector;
+using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 namespace PresentationModel
 {
@@ -12,14 +15,29 @@ namespace PresentationModel
         [SerializeField] private int _maxValue;
         [SerializeField] private bool _isCorrectlyConfigured;
 
+        private ExperienceManager _experienceManager;
+        private readonly CompositeDisposable _compositeDisposable = new();
+
+        [Inject]
+        public void Construct(ExperienceManager experienceManager)
+        {
+            _experienceManager = experienceManager;
+        }
+        
         private void Start()
         {
+            _experienceManager.PropertyExperience.Subscribe(newExperienceValue =>
+            {
+                _value = newExperienceValue;
+                UpdateProgressBar();
+            }).AddTo(_compositeDisposable);
+            
             if (_progressBarNotCompleted.type == Image.Type.Filled & 
                 _progressBarNotCompleted.fillMethod == Image.FillMethod.Horizontal)
             {
                 _isCorrectlyConfigured = true;
 
-                _value = 0;
+                _value = _experienceManager.PropertyExperience.Value;
                 _maxValue = 100;
                 
                 UpdateProgressBar();

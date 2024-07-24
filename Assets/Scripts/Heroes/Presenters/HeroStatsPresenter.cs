@@ -1,4 +1,5 @@
-﻿using UniRx;
+﻿using Assets.Scripts.Experience;
+using UniRx;
 
 namespace PresentationModel
 {
@@ -8,6 +9,7 @@ namespace PresentationModel
         public string Health { get; }
         public string Attack { get; }
         public string PriceGold  { get; }
+        public string CurrentExperience { get; }
         public ReactiveCommand LvlUp { get; }
         
         public IReadOnlyReactiveProperty<bool> CanBuy => _canBuy;
@@ -16,19 +18,25 @@ namespace PresentationModel
         private readonly HeroInfo _heroInfo;
         private readonly HeroExperienceBuyer _heroExperienceBuyer;
         private readonly CompositeDisposable _compositeDisposable = new();
+
+        private ExperienceManager _experienceManager;
         
         public IReadOnlyReactiveProperty<long> Money;
         
         public HeroStatsPresenter(HeroInfo heroInfo, MoneyStorage moneyStorage, 
-                                  HeroExperienceBuyer heroExperienceBuyer)
+                                  HeroExperienceBuyer heroExperienceBuyer,
+                                  ExperienceManager experienceManager)
         {
             _heroInfo = heroInfo;
             _heroExperienceBuyer = heroExperienceBuyer;
+            _experienceManager = experienceManager;
             
-            Lvl        = _heroInfo.Lvl.ToString();
-            Health     = _heroInfo.Health.ToString();
-            Attack     = _heroInfo.Attack.ToString();
-            PriceGold  = _heroInfo.MoneyPrice.ToString();
+            Lvl               = _heroInfo.Lvl.ToString();
+            Health            = _heroInfo.Health.ToString();
+            Attack            = _heroInfo.Attack.ToString();
+            PriceGold         = _heroInfo.MoneyPrice.ToString();
+            CurrentExperience = _heroInfo.CurrentExperience.ToString();
+            _experienceManager.TakeExpirience(_heroInfo.CurrentExperience);
             
             moneyStorage.Money.Subscribe(UpdateCanBuy).AddTo(_compositeDisposable);
             LvlUp = new ReactiveCommand(CanBuy);

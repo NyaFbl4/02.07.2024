@@ -1,4 +1,5 @@
-﻿using PresentationModel.Presenters;
+﻿using Assets.Scripts.Experience;
+using PresentationModel.Presenters;
 using Zenject;
 
 namespace PresentationModel
@@ -24,6 +25,11 @@ namespace PresentationModel
 
             Container
                 .Bind<HeroStatsPresenterFactory>()
+                .AsSingle()
+                .NonLazy();
+
+            Container
+                .Bind<ExperienceManager>()
                 .AsSingle()
                 .NonLazy();
         }

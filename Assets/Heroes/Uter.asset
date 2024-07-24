@@ -29,5 +29,5 @@ MonoBehaviour:
   _lvl: 1
   _health: 100
   _attack: 15
-  _currentExperience: 0
+  _currentExperience: 10
   _moneyPrice: 50
