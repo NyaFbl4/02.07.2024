@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Никита\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_02.07.2024.1746504936.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Никита\Desktop\Учеба\02.07.2024" t="IncludeRecursive">
+    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\lomok\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_02.07.2024.932187060.00" t="ExcludeRecursive" />
+    <e p="C:\Users\lomok\Desktop\Unity\Учеба\ДЗ\OTUS\02.07.2024" t="IncludeRecursive">
       <e p="02.07.2024.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
@@ -1255,6 +1255,7 @@
               <e p="Hero.cs" t="Include" />
               <e p="HeroController.cs" t="Include" />
               <e p="HeroInfo.cs" t="Include" />
+              <e p="IHero.cs" t="Include" />
               <e p="LvlUpHero.cs" t="Include" />
             </e>
             <e p="Interfaces" t="Include">

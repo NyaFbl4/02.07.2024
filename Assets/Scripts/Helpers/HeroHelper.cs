@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts.Configs;
 using Assets.Scripts.Experience;
 using PresentationModel.Presenters;
 using Sirenix.OdinInspector;
@@ -12,6 +13,8 @@ namespace PresentationModel
     public sealed class HeroHelper : MonoBehaviour
     {
         [SerializeField] private HeroInfo _heroInfo;
+        [SerializeField] private LevelUpConfig _levelUpConfig;
+        
         [SerializeField] private HeroInfoView _heroInfoView;
         [SerializeField] private HeroStatsView _heroStatsView;
 
@@ -44,12 +47,17 @@ namespace PresentationModel
         [Button]
         public void PopupHeroShow()
         {
-            _heroController.CreateHero(_heroInfo);
+            _heroController.CreateHero(_heroInfo, _levelUpConfig);
             IHeroStatsPresenter heroStatsPresenter = _heroStatsPresenterFactory.Create(_heroInfo);
             _heroStatsView.ShowPopupStats(heroStatsPresenter);
             IHeroPresenter heroPresenter = _heroPresenterFactory.Create(_heroInfo);
             _heroInfoView.Show(heroPresenter);
         }
 
+        [Button]
+        public void Update()
+        {
+            //_heroStatsView.UpdateStats();
+        }
     }
 }

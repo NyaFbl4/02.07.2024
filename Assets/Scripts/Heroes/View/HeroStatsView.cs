@@ -54,6 +54,14 @@ namespace PresentationModel
             _buttonClose.onClick.AddListener(Hide);
             UpdateButtonState();
         }
+
+        public void UpdateStats()
+        {
+            _lvl.text    = 10.ToString();
+            _health.text = 10.ToString();
+            _attack.text = 10.ToString();
+        }
+        
         
         private void ExperienceUpdate(int experienceValue)
         {

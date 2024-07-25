@@ -1,32 +1,55 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Configs;
+using Assets.Scripts.Experience;
+using UniRx;
+using UnityEngine;
+using Zenject;
 
 namespace PresentationModel
 {
     public class HeroController
     {
-        //private HeroInfo _heroInfo;
-        private Hero _hero;
+        //private LevelUpConfig _levelUpConfig;
 
-        public HeroController(Hero hero)
+        
+        private Hero _hero;
+        private HeroStatsView _heroStatsView;
+
+        private int _increaseHealth;
+        private int _increaseAttack;
+
+        public HeroController(Hero hero, HeroStatsView heroStatsView)
         {
             _hero = hero;
+            _heroStatsView = heroStatsView;
         }
-        
-        public void CreateHero(HeroInfo heroInfo)
+
+        public void LvlUp()
         {
-            _hero = new Hero(heroInfo);
+            _heroStatsView.UpdateStats();
+        }
+
+        public void CreateHero(HeroInfo heroInfo, LevelUpConfig levelUpConfig)
+        {
+            _increaseHealth = levelUpConfig.HealthUp;
+            _increaseAttack = levelUpConfig.AttackUp;
+            
+            _hero = new Hero();
+            
+            _hero.Name = heroInfo.Name;
+            _hero.Icon = heroInfo.Icon;
+            _hero.Description = heroInfo.Description;
+            _hero.Lvl = heroInfo.Lvl;
+            _hero.Health = heroInfo.Health;
+            _hero.Attack = heroInfo.Attack;
+            _hero.CurrentExperience = heroInfo.CurrentExperience;
+            Debug.Log("герой создан");
             ShowStats(_hero);
         }
 
         private void ShowStats(Hero hero)
         {
-            Debug.Log(hero.Name);
-            //Debug.Log(hero.Name.ToString());
-            Debug.Log(hero.Description);
-            Debug.Log(hero.Lvl.ToString());
-            Debug.Log(hero.Health.ToString());
-            Debug.Log(hero.Attack.ToString());
-            Debug.Log(hero.CurrentExperience.ToString());
+            Debug.Log(_increaseHealth.ToString());
+            Debug.Log(_increaseAttack.ToString());
         }
     }
 }

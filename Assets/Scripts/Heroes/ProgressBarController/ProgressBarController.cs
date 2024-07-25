@@ -16,7 +16,7 @@ namespace PresentationModel
         [SerializeField] private bool _isCorrectlyConfigured;
 
         private ExperienceManager _experienceManager;
-        private readonly CompositeDisposable _compositeDisposable = new();
+        private readonly CompositeDisposable _disposable = new();
 
         [Inject]
         public void Construct(ExperienceManager experienceManager)
@@ -30,7 +30,7 @@ namespace PresentationModel
             {
                 _value = newExperienceValue;
                 UpdateProgressBar();
-            }).AddTo(_compositeDisposable);
+            }).AddTo(_disposable);
             
             if (_progressBarNotCompleted.type == Image.Type.Filled & 
                 _progressBarNotCompleted.fillMethod == Image.FillMethod.Horizontal)

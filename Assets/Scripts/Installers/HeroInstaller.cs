@@ -1,11 +1,13 @@
 ﻿using Assets.Scripts.Experience;
 using PresentationModel.Presenters;
+using UnityEngine;
 using Zenject;
 
 namespace PresentationModel
 {
     public sealed class HeroInstaller : MonoInstaller
     {
+        [SerializeField] private HeroStatsView _heroStatsView;
         public override void InstallBindings()
         {
             Container
@@ -27,6 +29,11 @@ namespace PresentationModel
                 .Bind<HeroStatsPresenterFactory>()
                 .AsSingle()
                 .NonLazy();
+
+            Container
+                .Bind<HeroStatsView>()
+                .FromInstance(this._heroStatsView)
+                .AsSingle();
 
             Container
                 .Bind<ExperienceManager>()

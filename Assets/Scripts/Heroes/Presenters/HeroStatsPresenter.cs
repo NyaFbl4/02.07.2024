@@ -45,6 +45,8 @@ namespace PresentationModel
             
             Money = moneyStorage.Money;
         }
+        
+        
 
         ~HeroStatsPresenter()
         {

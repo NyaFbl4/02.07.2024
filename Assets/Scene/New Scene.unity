@@ -3503,6 +3503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b67be86ca40481e49acb48117a55636e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _heroStatsView: {fileID: 1365962785}
 --- !u!4 &1559735887
 Transform:
   m_ObjectHideFlags: 0
@@ -4404,6 +4405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _heroInfo: {fileID: 11400000, guid: 0d5e8a6cfd09e7941921eae2449d8081, type: 2}
+  _levelUpConfig: {fileID: 11400000, guid: 5b29405e4a16841439863d94b6d959f3, type: 2}
   _heroInfoView: {fileID: 1365962784}
   _heroStatsView: {fileID: 1365962785}
 --- !u!1 &2141973651

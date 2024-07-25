@@ -1,28 +1,23 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace PresentationModel
 {
     public class Hero
     {
-        private string _name;
-        private Sprite _icon;
-        private string _description;
-        private int _lvl;
-        private int _health;
-        private int _attack;
-        private int _currentExperience;
-
-        public Hero(HeroInfo heroInfo)
-        {
-            _name              = heroInfo.Name;
-            _icon              = heroInfo.Icon;
-            _description       = heroInfo.Description;
-            _lvl               = heroInfo.Lvl;
-            _health            = heroInfo.Health;
-            _attack            = heroInfo.Attack;
-            _currentExperience = heroInfo.CurrentExperience;
-        }
+        public string Name { get; set; }
+        public Sprite Icon { get; set; }
+        public string Description { get; set; } 
+        public int Lvl { get; set; }
+        public int Health { get; set; }
+        public int Attack { get; set; }
+        public int CurrentExperience { get; set; }
         
+        //private readonly HeroInfo _heroInfo;
+
+
+        
+        /*
         public string Name => _name;
         public Sprite Icon => _icon;
         public string Description => _description;
@@ -31,5 +26,6 @@ namespace PresentationModel
         public int Attack => _attack;
         public int CurrentExperience => _currentExperience;
         //public int MoneyPrice => _moneyPrice;
+        */
     }
 }
