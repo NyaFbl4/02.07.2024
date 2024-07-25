@@ -14,10 +14,11 @@ namespace PresentationModel
         [SerializeField] private HeroInfo _heroInfo;
         [SerializeField] private HeroInfoView _heroInfoView;
         [SerializeField] private HeroStatsView _heroStatsView;
-        private ExperienceManager _experienceManager;
 
         private HeroPresenterFactory _heroPresenterFactory;
         private HeroStatsPresenterFactory _heroStatsPresenterFactory;
+        private ExperienceManager _experienceManager;
+        private HeroController _heroController;
         
         private readonly CompositeDisposable _compositeDisposable = new();
 
@@ -32,16 +33,18 @@ namespace PresentationModel
         [Inject]
         private void Construct(HeroPresenterFactory heroPresenterFactory, 
                                HeroStatsPresenterFactory heroStatsPresenterFactory,
-                               ExperienceManager experienceManager)
+                               ExperienceManager experienceManager, HeroController heroController)
         {
             _heroStatsPresenterFactory = heroStatsPresenterFactory;
             _heroPresenterFactory = heroPresenterFactory;
             _experienceManager = experienceManager;
+            _heroController = heroController;
         }
 
         [Button]
         public void PopupHeroShow()
         {
+            _heroController.CreateHero(_heroInfo);
             IHeroStatsPresenter heroStatsPresenter = _heroStatsPresenterFactory.Create(_heroInfo);
             _heroStatsView.ShowPopupStats(heroStatsPresenter);
             IHeroPresenter heroPresenter = _heroPresenterFactory.Create(_heroInfo);

@@ -22,5 +22,14 @@ namespace PresentationModel
             _attack            = heroInfo.Attack;
             _currentExperience = heroInfo.CurrentExperience;
         }
+        
+        public string Name => _name;
+        public Sprite Icon => _icon;
+        public string Description => _description;
+        public int Lvl => _lvl;
+        public int Health => _health;
+        public int Attack => _attack;
+        public int CurrentExperience => _currentExperience;
+        //public int MoneyPrice => _moneyPrice;
     }
 }

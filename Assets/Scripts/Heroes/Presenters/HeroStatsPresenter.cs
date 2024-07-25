@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.Experience;
 using UniRx;
+using Zenject;
 
 namespace PresentationModel
 {
@@ -22,14 +23,14 @@ namespace PresentationModel
         private ExperienceManager _experienceManager;
         
         public IReadOnlyReactiveProperty<long> Money;
-        
+
         public HeroStatsPresenter(HeroInfo heroInfo, MoneyStorage moneyStorage, 
                                   HeroExperienceBuyer heroExperienceBuyer,
                                   ExperienceManager experienceManager)
         {
             _heroInfo = heroInfo;
             _heroExperienceBuyer = heroExperienceBuyer;
-            _experienceManager = experienceManager;
+            _experienceManager   = experienceManager;
             
             Lvl               = _heroInfo.Lvl.ToString();
             Health            = _heroInfo.Health.ToString();
@@ -44,7 +45,7 @@ namespace PresentationModel
             
             Money = moneyStorage.Money;
         }
-        
+
         ~HeroStatsPresenter()
         {
             _compositeDisposable.Dispose();

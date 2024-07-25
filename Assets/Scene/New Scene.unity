@@ -4307,7 +4307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83276331a82ef4d4caac8c9c4015b35c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _current: 5
+  _current: 500
 --- !u!114 &2101990271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4403,7 +4403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b788d87f43a19542bf195e30e86cf1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _heroInfo: {fileID: 11400000, guid: 808c5f5d06b9d6f43bc8a289c57d9189, type: 2}
+  _heroInfo: {fileID: 11400000, guid: 0d5e8a6cfd09e7941921eae2449d8081, type: 2}
   _heroInfoView: {fileID: 1365962784}
   _heroStatsView: {fileID: 1365962785}
 --- !u!1 &2141973651

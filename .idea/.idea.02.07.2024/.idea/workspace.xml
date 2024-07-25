@@ -16,11 +16,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Buttons/BuyButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helpers/Helper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Heroes/HeroInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helpers/HeroHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Money/MoneyStorage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Money/MoneyObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helpers/Helper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Heroes/Hero/HeroInfo.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -54,20 +54,22 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Popups/TestPopup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Popups/HeroPopup.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Popups/PopupHero.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Hero.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/HeroInfo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Experience/ExperienceController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Installers/HeroInstaller.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/View/HeroInfoView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Interfaces/IHeroPresenter.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Interfaces/IHeroStatsPresenter.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/View/HeroStatsView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Presenters/HeroStatsPresenterFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Presenters/HeroStatsPresenter.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Helpers/HeroHelper.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/ProgressBarController/ProgressBarController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Buyers/HeroExperienceBuyer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Experience/ExperienceManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/View/HeroStatsView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Hero.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Presenters/HeroStatsPresenter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Hero/Hero.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Helpers/HeroHelper.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Heroes/Hero/HeroController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Installers/HeroInstaller.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ivvMOrGUCMFF4Go369SnizwJl7" />
@@ -99,6 +101,8 @@
       <workItem from="1721648880571" duration="15000" />
       <workItem from="1721648932336" duration="2576000" />
       <workItem from="1721716502458" duration="7148000" />
+      <workItem from="1721888672932" duration="217000" />
+      <workItem from="1721888926994" duration="8586000" />
     </task>
     <servers />
   </component>

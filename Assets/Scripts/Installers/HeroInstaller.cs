@@ -32,6 +32,16 @@ namespace PresentationModel
                 .Bind<ExperienceManager>()
                 .AsSingle()
                 .NonLazy();
+            
+            Container
+                .Bind<Hero>()
+                .AsTransient()
+                .NonLazy();
+
+            Container
+                .Bind<HeroController>()
+                .AsSingle()
+                .NonLazy();
         }
     }
 }
