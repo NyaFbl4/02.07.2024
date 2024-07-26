@@ -1,6 +1,5 @@
-﻿using Assets.Scripts.Experience;
-using UniRx;
-using Zenject;
+﻿using UniRx;
+
 
 namespace PresentationModel
 {
@@ -28,7 +27,7 @@ namespace PresentationModel
                                   HeroExperienceBuyer heroExperienceBuyer,
                                   ExperienceManager experienceManager)
         {
-            _heroInfo = heroInfo;
+            _heroInfo            = heroInfo;
             _heroExperienceBuyer = heroExperienceBuyer;
             _experienceManager   = experienceManager;
             
@@ -45,8 +44,6 @@ namespace PresentationModel
             
             Money = moneyStorage.Money;
         }
-        
-        
 
         ~HeroStatsPresenter()
         {

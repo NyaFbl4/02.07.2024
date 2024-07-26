@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UniRx;
 
 namespace PresentationModel
 {
@@ -8,12 +7,5 @@ namespace PresentationModel
         string Name   { get; }
         public string Description { get; }
         Sprite Icon  { get; }
-
-        
-
-        IReadOnlyReactiveProperty<bool> CanBuy { get; }
-        ReactiveCommand BuyCommand { get; }
-        
-        void Buy();
     }
 }

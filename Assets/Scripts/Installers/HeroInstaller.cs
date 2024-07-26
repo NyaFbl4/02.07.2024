@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.Experience;
-using PresentationModel.Presenters;
+﻿using PresentationModel.Presenters;
 using UnityEngine;
 using Zenject;
 
@@ -41,7 +40,7 @@ namespace PresentationModel
                 .NonLazy();
             
             Container
-                .Bind<Hero>()
+                .Bind<HeroStats>()
                 .AsTransient()
                 .NonLazy();
 

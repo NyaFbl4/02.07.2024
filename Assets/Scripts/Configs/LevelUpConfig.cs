@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts.Configs
+namespace PresentationModel
 {
     [CreateAssetMenu(fileName = "LevelUpConfig", menuName = "Configs/LevelUpConfig")]
-    public class LevelUpConfig : ScriptableObject
+    public sealed class LevelUpConfig : ScriptableObject
     {
         [SerializeField] private int _healthUp;
         [SerializeField] private int _attackUp;

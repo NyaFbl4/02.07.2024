@@ -1,9 +1,7 @@
-﻿using Assets.Scripts.Experience;
-using TMPro;
+﻿using TMPro;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
-using Zenject;
 
 namespace PresentationModel
 {
@@ -18,25 +16,8 @@ namespace PresentationModel
         [SerializeField] private Button _buttonClose;
 
         private IHeroStatsPresenter _heroStatsPresenter;
-        //private ExperienceManager _experienceManager;
         private readonly CompositeDisposable _disposable = new();
 
-        /*
-        public void Start()
-        {
-            _experienceManager.PropertyExperience.Subscribe(newExperienceValue =>
-            {
-                ExperienceUpdate(newExperienceValue);
-            }).AddTo(_disposable);
-        }
-
-        [Inject]
-        public void Construct(ExperienceManager experienceManager)
-        {
-            _experienceManager = experienceManager;
-        }
-        */
-        
         public void ShowPopupStats(IHeroStatsPresenter iHeroStatsPresenter)
         {
             IHeroStatsPresenter heroStatsPresenter = iHeroStatsPresenter as IHeroStatsPresenter;

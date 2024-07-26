@@ -1,10 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using Assets.Scripts.Configs;
-using Assets.Scripts.Experience;
 using PresentationModel.Presenters;
 using Sirenix.OdinInspector;
-using UniRx;
 using UnityEngine;
 using Zenject;
 
@@ -20,19 +15,15 @@ namespace PresentationModel
 
         private HeroPresenterFactory _heroPresenterFactory;
         private HeroStatsPresenterFactory _heroStatsPresenterFactory;
-        private ExperienceManager _experienceManager;
         private HeroController _heroController;
-        
-        private readonly CompositeDisposable _compositeDisposable = new();
-        
+
         [Inject]
         private void Construct(HeroPresenterFactory heroPresenterFactory, 
                                HeroStatsPresenterFactory heroStatsPresenterFactory,
-                               ExperienceManager experienceManager, HeroController heroController)
+                               HeroController heroController)
         {
             _heroStatsPresenterFactory = heroStatsPresenterFactory;
             _heroPresenterFactory = heroPresenterFactory;
-            _experienceManager = experienceManager;
             _heroController = heroController;
         }
 

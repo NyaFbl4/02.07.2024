@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-using UniRx;
+﻿using UniRx;
 
 namespace PresentationModel
 {

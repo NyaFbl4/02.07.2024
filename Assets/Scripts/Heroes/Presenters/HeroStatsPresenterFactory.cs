@@ -1,6 +1,4 @@
-﻿using Assets.Scripts.Experience;
-
-namespace PresentationModel.Presenters
+﻿namespace PresentationModel.Presenters
 {
     public sealed class HeroStatsPresenterFactory
     {

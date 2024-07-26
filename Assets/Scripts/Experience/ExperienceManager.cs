@@ -1,8 +1,6 @@
-﻿using PresentationModel;
-using UniRx;
-using UnityEngine;
+﻿using UniRx;
 
-namespace Assets.Scripts.Experience
+namespace PresentationModel
 {
     public sealed class ExperienceManager
     {
@@ -24,13 +22,11 @@ namespace Assets.Scripts.Experience
         public void AddExperience(int quantity)
         {
             PropertyExperience.Value += quantity;
-            //_heroStatsView.ExperienceUpdate(PropertyExperience.Value);
-            
+
             if (PropertyExperience.Value >= 100)
             {
                 PropertyExperience.Value -= 100;
                 _heroController.LvlUp();
-                Debug.Log("получен уровень");
             }
             
             _heroStatsView.ExperienceUpdate(PropertyExperience.Value);

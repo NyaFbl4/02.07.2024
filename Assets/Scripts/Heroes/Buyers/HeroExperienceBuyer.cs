@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.Experience;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace PresentationModel
 {
@@ -7,7 +6,7 @@ namespace PresentationModel
     {
         private readonly MoneyStorage _moneyStorage;
         private readonly ExperienceManager _experienceManager;
-        private int quantityExperience;
+        private int quantityExperience = 10;
 
         public HeroExperienceBuyer(MoneyStorage moneyStorage, 
                                    ExperienceManager experienceManager)
@@ -21,7 +20,7 @@ namespace PresentationModel
             if (CanBuy(heroInfo))
             {
                 _moneyStorage.SpendMoney(heroInfo.MoneyPrice);
-                _experienceManager.AddExperience(10);
+                _experienceManager.AddExperience(quantityExperience);
             }
             else
             {

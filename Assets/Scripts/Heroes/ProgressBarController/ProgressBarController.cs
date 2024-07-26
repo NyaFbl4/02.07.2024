@@ -1,6 +1,4 @@
-﻿using Assets.Scripts.Experience;
-using Sirenix.OdinInspector;
-using UniRx;
+﻿using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -12,7 +10,7 @@ namespace PresentationModel
         [SerializeField] private Image _progressBarNotCompleted;
 
         [SerializeField] private int _value;
-        [SerializeField] private int _maxValue;
+        [SerializeField] private int _maxValue = 100;
         [SerializeField] private bool _isCorrectlyConfigured;
 
         private ExperienceManager _experienceManager;
@@ -38,8 +36,7 @@ namespace PresentationModel
                 _isCorrectlyConfigured = true;
 
                 _value = _experienceManager.PropertyExperience.Value;
-                _maxValue = 100;
-                
+
                 UpdateProgressBar();
             }
             else
@@ -56,13 +53,6 @@ namespace PresentationModel
             }
 
             _progressBarNotCompleted.fillAmount = (float) _value / _maxValue;
-        }
-
-        [Button]
-        public void AddValue(int value)
-        {
-            _value += value;
-            UpdateProgressBar();
         }
     }
 }
