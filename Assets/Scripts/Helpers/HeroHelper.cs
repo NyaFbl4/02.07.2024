@@ -24,14 +24,6 @@ namespace PresentationModel
         private HeroController _heroController;
         
         private readonly CompositeDisposable _compositeDisposable = new();
-
-        void Start()
-        {
-            _experienceManager.PropertyExperience.Subscribe(newExperienceValue =>
-            {
-                Debug.Log("Опыт изменился: " + newExperienceValue);
-            }).AddTo(_compositeDisposable);
-        }
         
         [Inject]
         private void Construct(HeroPresenterFactory heroPresenterFactory, 
@@ -52,12 +44,6 @@ namespace PresentationModel
             _heroStatsView.ShowPopupStats(heroStatsPresenter);
             IHeroPresenter heroPresenter = _heroPresenterFactory.Create(_heroInfo);
             _heroInfoView.Show(heroPresenter);
-        }
-
-        [Button]
-        public void Update()
-        {
-            //_heroStatsView.UpdateStats();
         }
     }
 }

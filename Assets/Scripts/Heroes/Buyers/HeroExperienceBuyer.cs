@@ -22,7 +22,6 @@ namespace PresentationModel
             {
                 _moneyStorage.SpendMoney(heroInfo.MoneyPrice);
                 _experienceManager.AddExperience(10);
-                Debug.Log($"<color=green>Hero {heroInfo.Name} gained experience!</color>");
             }
             else
             {

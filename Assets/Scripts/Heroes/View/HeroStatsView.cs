@@ -18,9 +18,10 @@ namespace PresentationModel
         [SerializeField] private Button _buttonClose;
 
         private IHeroStatsPresenter _heroStatsPresenter;
-        private ExperienceManager _experienceManager;
+        //private ExperienceManager _experienceManager;
         private readonly CompositeDisposable _disposable = new();
 
+        /*
         public void Start()
         {
             _experienceManager.PropertyExperience.Subscribe(newExperienceValue =>
@@ -34,6 +35,7 @@ namespace PresentationModel
         {
             _experienceManager = experienceManager;
         }
+        */
         
         public void ShowPopupStats(IHeroStatsPresenter iHeroStatsPresenter)
         {
@@ -55,15 +57,14 @@ namespace PresentationModel
             UpdateButtonState();
         }
 
-        public void UpdateStats()
+        public void UpdateStats(int newLvl, int newHealth, int newAttack)
         {
-            _lvl.text    = 10.ToString();
-            _health.text = 10.ToString();
-            _attack.text = 10.ToString();
+            _lvl.text    = newLvl.ToString();
+            _health.text = newHealth.ToString();
+            _attack.text = newAttack.ToString();
         }
-        
-        
-        private void ExperienceUpdate(int experienceValue)
+
+        public void ExperienceUpdate(int experienceValue)
         {
             _currentExperience.text = experienceValue.ToString();
         }

@@ -7,11 +7,13 @@ namespace Assets.Scripts.Experience
     public sealed class ExperienceManager
     {
         public ReactiveProperty<int> PropertyExperience = new ReactiveProperty<int>();
-        public HeroController _HeroController;
+        public HeroController _heroController;
+        public HeroStatsView _heroStatsView;
 
-        public ExperienceManager(HeroController heroController)
+        public ExperienceManager(HeroController heroController, HeroStatsView heroStatsView)
         {
-            _HeroController = heroController;
+            _heroController = heroController;
+            _heroStatsView = heroStatsView;
         }
 
         public void TakeExpirience(int exp)
@@ -22,14 +24,16 @@ namespace Assets.Scripts.Experience
         public void AddExperience(int quantity)
         {
             PropertyExperience.Value += quantity;
-
+            //_heroStatsView.ExperienceUpdate(PropertyExperience.Value);
+            
             if (PropertyExperience.Value >= 100)
             {
-                PropertyExperience.Value = 0;
-                _HeroController.LvlUp();
+                PropertyExperience.Value -= 100;
+                _heroController.LvlUp();
                 Debug.Log("получен уровень");
             }
             
+            _heroStatsView.ExperienceUpdate(PropertyExperience.Value);
         }
     }
 }
